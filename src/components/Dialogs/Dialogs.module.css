@@ -1,0 +1,16 @@
+.dialogsWrapper {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsList {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.messagesList {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}

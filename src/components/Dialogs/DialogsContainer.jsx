@@ -15,9 +15,7 @@ const DialogsContainer = (props) => {
 
   return (<Dialogs updateNewMessageText={onNewMessageTextChange}
                    sendMessage={onSendMessageClick}
-                   dialogs={props.store.getState().dialogsPage.dialogs}
-                   messages={props.store.getState().dialogsPage.messages}
-                   newMessageText={props.store.getState().dialogsPage.newMessageText}/>
+                   state={props.store.getState().dialogsPage}/>
   );
 }
 

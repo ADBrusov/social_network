@@ -6,10 +6,10 @@ import Message from './Message/Message';
 
 const Dialogs = (props) => {
 
-  let dialogsElements = props.dialogs
+  let dialogsElements = props.state.dialogs
     .map(dialog => <Dialog name={dialog.name} id={dialog.id}/>);
 
-  let messagesElements = props.messages
+  let messagesElements = props.state.messages
     .map(message => <Message message={message.message}/>);
 
   let newMessageTextElement = React.createRef();
@@ -37,7 +37,7 @@ const Dialogs = (props) => {
             placeholder='Write a message...'
             ref={newMessageTextElement}
             onChange={onNewMessageTextChange}
-            value={props.newMessageText}
+            value={props.state.newMessageText}
           />
           <button className={styles.newMessageButton} onClick={onSendMessageClick}>Send</button>
         </div>

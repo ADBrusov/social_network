@@ -1,12 +1,11 @@
 import React from 'react';
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../redux/state';
+import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/profilePageReducer';
 import Post from './Post/Post';
 import styles from './MyPosts.module.css'
 
 const MyPosts = (props) => {
-
   let postsElements = props.posts
-    .map(post => <Post message={post.message} likesCount={post.likesCount} />);
+    .map(post => <Post message={post.message} likesCount={post.likesCount}/>);
 
   let newPostTextElement = React.createRef();
 

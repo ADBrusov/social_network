@@ -14,3 +14,20 @@
     padding: 20px;
     margin: 0;
 }
+
+.newMessageWrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 20px;
+}
+
+.newMessageWrapper textarea {
+    width: 100%;
+    border: none;
+    padding: 0;
+    min-height: 40px;
+}
+
+.newMessageButton {
+    display: block;
+}

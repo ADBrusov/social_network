@@ -1,5 +1,5 @@
 import React from 'react';
-import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../redux/state';
+import { sendMessageActionCreator, updateNewMessageTextActionCreator } from '../../redux/dialogsPageReducer';
 import Dialog from './Dialog/Dialog';
 import Message from './Message/Message';
 import styles from './Dialogs.module.css';
@@ -33,14 +33,14 @@ const Dialogs = (props) => {
         <ul className={styles.messagesList}>
           {messagesElements}
         </ul>
-        <div>
+        <div className={styles.newMessageWrapper}>
           <textarea
             placeholder='Write a message...'
             ref={newMessageTextElement}
             onChange={onNewMessageTextChange}
             value={props.dialogsPageState.newMessageText}
           />
-          <button className={styles.buttonSend} onClick={onSendMessageClick}>Send</button>
+          <button className={styles.newMessageButton} onClick={onSendMessageClick}>Send</button>
         </div>
       </div>
     </div>

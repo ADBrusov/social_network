@@ -1,7 +1,7 @@
 import React from 'react';
-import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/profilePageReducer';
-import Post from './Post/Post';
 import styles from './MyPosts.module.css'
+import Post from './Post/Post';
+
 
 const MyPosts = (props) => {
   let postsElements = props.posts
@@ -11,23 +11,21 @@ const MyPosts = (props) => {
 
   let onNewPostTextChange = () => {
     let text = newPostTextElement.current.value;
-    props.dispatch(updateNewPostTextActionCreator(text));
+    props.updateNewPostText(text);
   };
 
   let onAddPostClick = () => {
-    props.dispatch(addPostActionCreator());
+    props.addPost();
   };
 
   return (
     <div className={styles.wrapper}>
       <h3>My posts</h3>
       <div>
-        <textarea
-          placeholder="What's new?"
-          ref={newPostTextElement}
-          onChange={onNewPostTextChange}
-          value={props.newPostText}
-        />
+        <textarea placeholder="What's new?"
+                  ref={newPostTextElement}
+                  onChange={onNewPostTextChange}
+                  value={props.newPostText}/>
         <button className={styles.buttonSend} onClick={onAddPostClick}>Post</button>
       </div>
       <div className={styles.posts}>
@@ -36,5 +34,6 @@ const MyPosts = (props) => {
     </div>
   );
 }
+
 
 export default MyPosts;

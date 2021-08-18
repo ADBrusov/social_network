@@ -29,6 +29,7 @@ function profilePageReducer(state = initialState, action) {
   return state;
 }
 
+
 export const updateNewPostTextActionCreator = (text) =>
   ({type: UPDATE_NEW_POST_TEXT, newText: text});
 export const addPostActionCreator = () => ({type: ADD_POST});

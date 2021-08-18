@@ -5,23 +5,20 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import store from './redux/redux-store';
 
-let rerenderEntireTree = (state) => {
-    ReactDOM.render(
-        <React.StrictMode>
-            <App
-                state={state}
-                dispatch={store.dispatch.bind(store)}
-            />
-        </React.StrictMode>,
-        document.getElementById('root')
-    );
+
+let rerenderEntireTree = (store) => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App store={store}/>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
 };
 
-rerenderEntireTree(store.getState());
+rerenderEntireTree(store);
 
 store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree(state);
+  rerenderEntireTree(store);
 });
 
 

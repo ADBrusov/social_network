@@ -15,8 +15,3 @@
   grid-area: content;
   background-color: #2787F5;
 }
-  
-.app-content img {
-  width: 100%;
-  max-height: 250px;
-}

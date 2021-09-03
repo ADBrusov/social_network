@@ -11,13 +11,12 @@ const initialState = {
 
 function profilePageReducer(state = initialState, action) {
   switch (action.type) {
-    case UPDATE_NEW_POST_TEXT: {
+    case UPDATE_NEW_POST_TEXT:
       return {
         ...state,
         newPostText: action.newText,
       };
-    }
-    case ADD_POST: {
+    case ADD_POST:
       let newPost = {
         id: state.posts.length + 1,
         message: state.newPostText,
@@ -28,7 +27,6 @@ function profilePageReducer(state = initialState, action) {
         posts: [...state.posts, newPost],
         newPostText: '',
       };
-    }
     default:
       return state;
   }

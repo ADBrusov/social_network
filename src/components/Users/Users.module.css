@@ -1,0 +1,38 @@
+.list {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.listItem {
+  display: grid;
+  grid-template-columns: 0.5fr 9fr;
+  margin: 0 0 20px;
+}
+
+.userAvatar {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.followButton,
+.unfollowButton {
+  display: block;
+  margin: 10px auto;
+}
+
+.userInfo {
+  display: grid;
+  margin: 0 0 0 20px;
+}
+
+.userInfo p {
+  margin: 0;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 18px;
+}
